@@ -9,7 +9,7 @@ function playBaDing(n: number) {
 }
 
 function levelUp() {
-    if (workoutLevel >= 5) {
+    if (workoutLevel >= 2) {
         workoutLevel = 1
         music.beginMelody(music.builtInMelody(Melodies.PowerDown), MelodyOptions.OnceInBackground)
 
@@ -171,7 +171,7 @@ function doSquat(n: number) {
     for (let index = 0; index < 10; index++) {
         // Start
         basic.showArrow(ArrowNames.North)
-        for (let n = 0; n < workoutLevel + 1; n++) {
+        for (let n = 0; n < workoutLevel * 2; n++) {
             tick()
         }
 
@@ -179,7 +179,7 @@ function doSquat(n: number) {
         showUpState()
         basic.pause(1000)
         basic.showArrow(ArrowNames.South)
-        for (let n = 0; n < workoutLevel + 2; n++) {
+        for (let n = 0; n < workoutLevel * 3; n++) {
             tick()
         }
 
